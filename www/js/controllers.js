@@ -28,7 +28,7 @@ angular.module('starter.controllers', [])
 })
 
 .controller('ResultsCtrl', function($scope, $state) {
-  $scope.story = function() {
+  $scope.results = function() {
     $state.go('tab.chats');
   }
 })
