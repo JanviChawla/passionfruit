@@ -1,0 +1,50 @@
+<!--
+  This template loads for the 'tab.friend-detail' state (app.js)
+  'friend' is a $scope variable created in the FriendsCtrl controller (controllers.js)
+  The FriendsCtrl pulls data from the Friends service (service.js)
+  The Friends service returns an array of friend data
+-->
+<ion-view view-title="{{chat.name}}">
+  <ion-content class="padding">
+    <div class="item item-body">
+      <img class="full-image" ng-src="{{chat.face}}">
+      <p>
+        {{chat.desc}}
+      </p>
+    </div>
+
+    <div class="item item-divider">
+      Wages &amp; Employment Trends
+    </div>
+
+    <div class="item item-text-wrap">
+      <p>Median wages (2013)</p>
+      <p class="indented">
+        {{chat.wages}}
+      </p>
+      <p>Projected Growth (2012-2022)</p>
+      <p class="indented">
+        {{chat.growth}}
+      </p>
+
+    </div>
+
+    <div class="item item-divider">
+      Education Level Required
+    </div>
+
+    <div class="item item-text-wrap">
+      <p><span style="float: left">High school or equivalent</span><span style="float: right">{{chat.hs}}</span><span style="clear: both"></span></p>
+      <br>
+      <p><span style="float: left">Associate's degree</span><span style="float: right">{{chat.ad}}</span><span style="clear: both"></span></p>
+      <br>
+      <p><span style="float: left">Some college, no degree</span><span style="float: right">{{chat.scnd}}</span><span style="clear: both"></span></p>
+      <br>
+    </div>
+
+    
+      <button class="button button-full button-positive">
+        View Video
+      </button>
+  </ion-content>
+</ion-view>

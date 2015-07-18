@@ -1,0 +1,51 @@
+<!--
+  This template loads for the 'tab.friend-detail' state (app.js)
+  'friend' is a $scope variable created in the FriendsCtrl controller (controllers.js)
+  The FriendsCtrl pulls data from the Friends service (service.js)
+  The Friends service returns an array of friend data
+-->
+<ion-view view-title="{{chat.name}}">
+  <ion-content class="padding">
+    <div class="item item-body">
+      <img class="full-image" ng-src="{{chat.face}}">
+    </div>
+
+    <div class="item item-divider">
+      Hardware Required
+    </div>
+
+    <div class="item item-text-wrap">
+      <p>Arduino Board</p>
+      <p>LED</p>
+      <p>Resistor, anything between 220 ohm to 1K ohm</p>
+
+    </div>
+
+    <div class="item item-divider">
+      Instructions
+    </div>
+
+    <div class="item item-text-wrap">
+      <p>Initialize pin 13 as an output pin with the line <b>pinMode(13, OUTPUT);</b></p>
+    </div>
+
+      <div class="item item-text-wrap">
+        <p>In the main loop, turn on the LED with the line <b>digitalWrite(13, HIGH);</b></p>
+      </div>
+
+      <div class="item item-text-wrap">
+        <p>You can turn it off with the line <b>digitalWrite(13, LOW);</b></p>
+      
+
+    </div>
+
+
+    
+      <button class="button button-full button-balanced">
+        Start Project
+      </button>
+      <button class="button button-full button-positive">
+        Add to Favorites
+      </button>
+  </ion-content>
+</ion-view>
