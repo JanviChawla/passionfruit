@@ -5,7 +5,7 @@ angular.module('starter.controllers', [])
  
     $scope.login = function() {
         LoginService.loginUser($scope.data.username, $scope.data.password).success(function(data) {
-            $state.go('tab.chats');
+            $state.go('status');
         }).error(function(data) {
             var alertPopup = $ionicPopup.alert({
                 title: 'Login failed!',
@@ -13,6 +13,24 @@ angular.module('starter.controllers', [])
             });
         });
     }
+})
+
+.controller('StatusCtrl', function($scope, $state) {
+    $scope.status = function() {
+      $state.go('story');
+    }
+})
+
+.controller('StoryCtrl', function($scope, $state) {
+    $scope.story = function() {
+      $state.go('results');
+    }
+})
+
+.controller('ResultsCtrl', function($scope, $state) {
+  $scope.story = function() {
+    $state.go('tab.chats');
+  }
 })
 
 .controller('DashCtrl', function($scope, Projects) {
